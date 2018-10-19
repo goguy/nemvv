@@ -1,6 +1,6 @@
 module.exports = {
     db: {
-      url : "mongodb+srv://nembv:nembv@cluster0-dwwl8.gcp.mongodb.net/nemvv"
+      url : 'mongodb+srv://admin:admin@cluster0-dwwl8.gcp.mongodb.net/nemvv?retryWrites=true'
     },
     web: {
       host: 'localhost:3000',
