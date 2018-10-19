@@ -26,8 +26,8 @@ if(cfg.web.cors) {
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 app.use(logger('dev'));
-app.use(bodyParser.json({ limit: '10mb' }));
-app.use(bodyParser.urlencoded({ extended: false, limit: '10mb' }));
+app.use(bodyParser.json({ limit: '30mb' }));
+app.use(bodyParser.urlencoded({ extended: false, limit: '30mb' }));
 app.use(cookieParser());
 
 if(cfg.web.cors) app.use(require('cors')());
@@ -63,7 +63,7 @@ app.use(function(err, req, res, next) {
 mongoose.connect(cfg.db.url, { useNewUrlParser: true }, (err) => {
   if (err) return console.error(err);
   console.log('mongoose connected');
-  pg.test.model();
+  //pg.test.model();
 });
 
 module.exports = app;

@@ -10,6 +10,8 @@ exports.in = (req, res) => {
   if (id === undefined) return res.send({ success: false, msg: 'param err id' });
   if (pwd === undefined) return res.send({ success: false, msg: 'param err pwd' });
 
+  console.log('server-sign-in');
+
   let usr = {};
   User.findOne()
     .where('id').equals(id)
@@ -26,6 +28,7 @@ exports.in = (req, res) => {
         lv: r.lv,
       };
 
+      console.log(usr);
       const secret = req.app.get('jwt-secret');
       const p = new Promise((resolve, reject) => {
         jwt.sign(
