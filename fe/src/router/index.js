@@ -5,6 +5,7 @@ import axios from 'axios'
 import index from '@/components/index'
 import sign from '@/components/sign'
 import register from '@/components/register'
+import download from '@/components/download'
 import e404 from '@/components/e404'
 import user from '@/components/manage/user'
 import userModify from '@/components/user/modify'
@@ -123,6 +124,12 @@ export default new Router({
       path: '/register',
       name: 'register',
       component: register,
+      beforeEnter: redirectPath
+    },
+    {
+      path: '/download',
+      name: 'download',
+      component: download,
       beforeEnter: redirectPath
     },
     {

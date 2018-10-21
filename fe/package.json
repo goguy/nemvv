@@ -22,6 +22,7 @@
     "vee-validate": "^2.1.0-beta.11",
     "vue": "^2.5.2",
     "vue-cookie": "^1.1.4",
+    "vue-full-loading": "^1.2.1",
     "vue-router": "^3.0.1",
     "vue-wysiwyg": "^1.7.2",
     "vue2-google-maps": "^0.10.2",
